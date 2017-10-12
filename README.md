@@ -17,7 +17,12 @@ Steps:
 1. If everything goes correcly, you should have fixed project by then :)
 
 ## Swift4All - update all your dependencies to Swift 4
-By running `swift build & swift package generate-xcodeproj` you don't necessarily get all your dependencies built with Swift 4 (see [SR-5940](https://bugs.swift.org/browse/SR-5940)). This script fixes that for you.
+By running `swift build & swift package generate-xcodeproj` you don't necessarily get all your dependencies built with Swift 4 (see [SR-5940](https://bugs.swift.org/browse/SR-5940)). This script fixes that for you. You might want want to use my fork of Quick as Swift 4 is currently 
+broken, but [PR#755](https://github.com/Quick/Quick/pull/755) is waiting for the merge :)
+
+```swift
+.package(url: "https://github.com/sunshinejr/Quick.git", .branch("fix/spm_swift4"))
+```
 
 Steps:
 1. Go to your SPM project.
