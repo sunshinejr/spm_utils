@@ -32,5 +32,5 @@ Steps:
 1. Run `ruby path/to/spm_swift4all.rb` to update your Xcodeproj.
 1. If everything goes correcly, you should have your project updated.
 
-## [WIP] Inhibit deps warnings - Basically `inhibit_all_warnings` copy.
+## [WIP] Inhibit deps warnings - Basically `CocoaPods'` `inhibit_all_warnings` copy.
 This currently does not work, but it would be awesome to have it working sometime in future.
