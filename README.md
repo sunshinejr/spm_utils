@@ -1,7 +1,8 @@
 # SPM fixers
-Hey there! This is my repo for bunch of fixers for SPM. All of this is mostly work in progress and written in Ruby.
-Which means this is probably not the best code you'll see these days. Fortunately, I accept PRs to fix anything you see 
-that is wrong! I will be really grateful for that, actually.
+Hey there! This is my repo for a bunch of fixers for SPM. All of this is mostly work in progress and written in Ruby.
+Which means this is probably not the best code you'll see these days and I recommend you to do a **backup/commit before using this scripts**. 
+These were not tested on many projects yet, so please bear in mind that this is really experimental.
+Fortunately, I accept PRs to fix anything you see that is wrong! I will be really grateful for that, actually.
 
 ## Quick fixer
 See issue [Quick#751](https://github.com/Quick/Quick/issues/751) and PR [swift-package-manager#955](https://github.com/apple/swift-package-manager/pull/955). TL;DR because of SPM, Quick can't set `CLANG_ENABLE_MODULES` by itself.
