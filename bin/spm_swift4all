@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'swift4all'
+SPMFixers::Swift4All.run
