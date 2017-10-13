@@ -1,23 +1,9 @@
-require 'xcodeproj'
+require 'project_mod'
 
 module SPMFixers
     class Swift4All
         def self.run
-            xcodeprojs = Dir.new(Dir.pwd).select { |a| a.include? '.xcodeproj' }
-            xcodeprojs_count = xcodeprojs.count
-
-            abort "No *.xcodeproj files in current directory" if xcodeprojs_count == 0
-            abort "Found #{xcodeprojs_count} .xcodeproj files in the directory (1 required)." if xcodeprojs_count > 1
-
-            project = Xcodeproj::Project.open(xcodeprojs[0])
-            project.targets.each do |target|
-                target.build_configurations.each do |config|
-                    config.build_settings['SWIFT_VERSION'] = '4.0'
-                end
-            end
-
-            project.save()
-
+            ProjectMod.apply_build_setting(name: 'SWIFT_VERSION', value: '4.0')
             puts "All targets were updated to use Swift 4.0!"
         end
     end
