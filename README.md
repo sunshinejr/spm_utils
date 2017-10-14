@@ -34,3 +34,6 @@ Steps:
 
 ## [WIP] Inhibit deps warnings - Basically `CocoaPods'` `inhibit_all_warnings` copy.
 This currently does not work, but it would be awesome to have it working sometime in future.
+
+# License
+[MIT](https://github.com/sunshinejr/spm_fixers/blob/master/LICENSE).
