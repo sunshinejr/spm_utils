@@ -1,7 +1,7 @@
 require 'xcodeproj'
 
 class ProjectMod
-    def self.apply_build_setting(name:, value:, target_names: nil)
+    def self.apply_build_setting(name:, value:, target_names: [])
         xcodeprojs = Dir.new(Dir.pwd).select { |a| a.include? '.xcodeproj' }
         xcodeprojs_count = xcodeprojs.count
         
