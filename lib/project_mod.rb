@@ -1,7 +1,7 @@
 require 'xcodeproj'
 
 class ProjectMod
-    def self.apply_build_setting(name:, value:, target_name: nil, depedencies_required: [])
+    def self.apply_build_setting(name:, value:, target_names: nil)
         xcodeprojs = Dir.new(Dir.pwd).select { |a| a.include? '.xcodeproj' }
         xcodeprojs_count = xcodeprojs.count
         
@@ -10,20 +10,21 @@ class ProjectMod
         
         project = Xcodeproj::Project.open(xcodeprojs[0])
         targets = project.targets.clone
-        if target_name != nil
-            targets.select! { |t| t.name == target_name }
-        end
-        if !depedencies_required.empty?
-            targets.select! { |a| depedencies_required.include? a.name }
-        end
-        
-        abort "No targets" if targets.empty?
-        
-        target = targets[0]
-        target.build_configurations.each do |config|
-            config.build_settings[name] = value
+        if !target_names.empty?
+            not_found_targets = target_names.select { |t| !targets.map { |tt| tt.name }.include? t }
+            abort not_found_targets.join(", ") + " targets were not found in the Xcodeproj." if !not_found_targets.empty?
+
+            targets.select! { |t| target_names.include? t.name }
         end
         
-        project.save()
+        abort "No targets selected" if targets.empty?
+        
+        targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings[name] = value
+            end
+        end
+        
+        project.save
     end
 end
