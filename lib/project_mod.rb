@@ -10,7 +10,7 @@ module SPMFixers
             abort "Found #{xcodeprojs_count} .xcodeproj files in the directory (1 required)." if xcodeprojs_count > 1
             
             project = Xcodeproj::Project.open(xcodeprojs[0])
-            targets = project.targets
+            targets = project.targets.clone
             if target_name != nil
                 targets.select! { |t| t.name == target_name }
             end
@@ -18,14 +18,11 @@ module SPMFixers
                 targets.select! { |a| depedencies_required.include? a.name }
             end
             
-            targets_count = targets.count
-            abort "No targets" if targets_count.empty?
+            abort "No targets" if targets.empty?
             
             target = targets[0]
             target.build_configurations.each do |config|
-                puts "current: #{config.build_settings[name]}"
                 config.build_settings[name] = value
-                puts "now: #{config.build_settings[name]}"
             end
             
             project.save()
