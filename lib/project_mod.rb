@@ -38,7 +38,7 @@ class ProjectMod
         project.save
     end
 
-    def self.append_or_apply_build_setting(name:, append_value:, target_names: []) 
+    def self.append_or_apply_build_setting(name:, value:, target_names: []) 
         project = xcodeproject(path: Dir.pwd)
         targets = get_targets(project: project, target_names: target_names)
         
