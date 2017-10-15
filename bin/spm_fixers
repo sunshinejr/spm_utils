@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'fixquick'
 require 'clamp'
-require_relative '../lib'
+require_relative '../lib/project_mod'
 require_relative '../lib/command/fix_quick_command'
 
 class MainCommand < Clamp::Command
