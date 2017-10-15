@@ -5,12 +5,14 @@ require_relative '../lib/project_mod'
 require_relative '../lib/command/fix_quick_command'
 require_relative '../lib/command/swift_version_command'
 require_relative '../lib/command/inhibit_all_warnings_command'
+require_relative '../lib/command/clean_project_command'
 require_relative '../lib/version'
 
 class MainCommand < Clamp::Command
     subcommand 'quick', 'Fix Quick\'s problem with SPM until it\'s resolved. See: https://github.com/Quick/Quick/issues/751', FixQuickCommand
     subcommand 'swift', 'Change Swift version of a target/targets', SwiftVersionCommand
     subcommand 'inhibit_all_warnings', 'Inhibit all warninigs in a target/targets', InhibitAllWarningsCommand
+    subcommand 'clean_project', 'Remove .build dir, Package.resolved & packages cache', CleanProjectCommand
     
     option "--version", :flag, "Show version" do
         puts SPMFixers::VERSION
