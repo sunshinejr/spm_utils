@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'fixquick'
+require 'clamp'
+require_relative '../lib'
+require_relative '../lib/command/fix_quick_command'
+
+class MainCommand < Clamp::Command
+    subcommand 'quick', 'Fix Quick\'s problem with SPM until it\'s resolved.\n See: https://github.com/Quick/Quick/issues/751', FixQuickCommand
+end
+
+MainCommand.run
