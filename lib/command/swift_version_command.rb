@@ -1,6 +1,7 @@
 class SwiftVersionCommand < Clamp::Command
+    parameter "VERSION", "version", :attribute_name => :swift_version
     option ['--target'], 'TARGET', 'Target name', :multivalued => true
-    option ['--swift-version'], 'SWIFT_VERSION', 'What Swift version to change into', :required => true
+    # option ['--swift-version'], 'SWIFT_VERSION', 'What Swift version to change into', :required => true
 
     def execute
         supported_swift_versions = ['3', '4']
