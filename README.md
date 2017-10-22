@@ -37,7 +37,7 @@ spm_utils swift_version 3
 
 ### To update all targets to use Swift 4:
 ```bash
-spm_utils swift_version 3
+spm_utils swift_version 4
 ```
 
 ### To update one targets to use Swift 4:
