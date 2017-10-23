@@ -1,5 +1,5 @@
 # SPM utils
-Hey there! This is my repo for a bunch of fixers for SPM. Please remember though, that all of this is mostly **work in progress**.
+Hey there! This is a repo with a bunch of utility scripts for SPM compiled to a ruby gem. I really like working with SPM nowadays, but I needed to automate some things that I could reuse both on my local computer and also on the CI - maybe you want to use them too! Please remember though, that all of this is mostly **work in progress** (it works on my computer&trade;)
 Fortunately, I accept PRs to fix anything you see that is wrong! I will be really grateful for that, actually.
 
 ## Before you use the script:
