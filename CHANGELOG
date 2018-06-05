@@ -1,0 +1,8 @@
+# 0.1.0
+
+- Renamed `swift_version` subcommand to `swift`
+- Valid `swift` versions are: 3.0, 4.0, 4.2
+
+# 0.0.1
+
+- 🎉
