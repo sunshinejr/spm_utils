@@ -10,7 +10,7 @@ require_relative '../lib/version'
 
 class MainCommand < Clamp::Command
     subcommand 'fix_quick', 'Fix Quick\'s problem with SPM until it\'s resolved. See: https://github.com/Quick/Quick/issues/751', FixQuickCommand
-    subcommand 'swift_version', 'Change Swift version of a target/targets', SwiftVersionCommand
+    subcommand 'swift', 'Change Swift version of a target/targets', SwiftVersionCommand
     subcommand 'inhibit_all_warnings', 'Inhibit all warninigs in a target/targets', InhibitAllWarningsCommand
     subcommand 'clean_project', 'Remove .build dir, Package.resolved & packages cache', CleanProjectCommand
     
