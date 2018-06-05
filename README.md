@@ -30,7 +30,7 @@ spm_utils fix_quick
 
 ## Swift version - update your targets to Swift 3 or 4
 
-By running `swift package generate-xcodeproj` you don't necessarily get all your targets built with Swift 4 (see [SR-5940](https://bugs.swift.org/browse/SR-5940)). You might also want to change one of the targets to use Swift 3 or 4. This script fixes that for you. _Note: You might want want to use my fork of Quick as Swift 4 is currently broken, but [PR#755](https://github.com/Quick/Quick/pull/755) is waiting for the merge :)_
+By running `swift package generate-xcodeproj` you don't necessarily get all your targets built with Swift 4 (see [SR-5940](https://bugs.swift.org/browse/SR-5940)). You might also want to change one of the targets to use Swift 3 or 4. This script fixes that for you!
 
 ### To use my fork of Quick fix a temporary fix:
 
