@@ -3,7 +3,7 @@
 Hey there! This is a repo with a bunch of utility scripts for SPM compiled to a ruby gem. I really like working with SPM nowadays, but I needed to automate some things that I could reuse both on my local computer and also on the CI - maybe you want to use them too!
 If you have an idea for a cool fixer/utility - don't hesitate to file and issue or make a PR!
 
-Current utilities:
+## Current functionalities:
 1. [#cleaning-your-project](Clean your project (remove cache, builds, xcodeproj etc))
 1. [#quick-fixer](Fix Quick on SPM)
 1. [#swift-version---update-your-targets-to-swift-3-or-4](Update Swift version in given target or all targets)
@@ -37,12 +37,6 @@ spm_utils fix_quick
 ## Swift version - update your targets to Swift 3 or 4
 
 By running `swift package generate-xcodeproj` you don't necessarily get all your targets built with Swift 4 (see [SR-5940](https://bugs.swift.org/browse/SR-5940)). You might also want to change one of the targets to use Swift 3 or 4. This script fixes that for you!
-
-### To use my fork of Quick fix a temporary fix:
-
-```swift
-.package(url: "https://github.com/sunshinejr/Quick.git", .branch("fix/spm_swift4"))
-```
 
 ### To update all targets to use Swift 3:
 
