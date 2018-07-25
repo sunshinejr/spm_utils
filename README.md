@@ -3,6 +3,12 @@
 Hey there! This is a repo with a bunch of utility scripts for SPM compiled to a ruby gem. I really like working with SPM nowadays, but I needed to automate some things that I could reuse both on my local computer and also on the CI - maybe you want to use them too!
 If you have an idea for a cool fixer/utility - don't hesitate to file and issue or make a PR!
 
+Current utilities:
+1. [#cleaning-your-project](Clean your project (remove cache, builds, xcodeproj etc))
+1. [#quick-fixer](Fix Quick on SPM)
+1. [#swift-version---update-your-targets-to-swift-3-or-4](Update Swift version in given target or all targets)
+1. [#inhibit-warnings](Inhibit all warnings in given target or all targets)
+
 ## Before you use the script:
 
 1.  Go to your SPM project.
