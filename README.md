@@ -4,10 +4,10 @@ Hey there! This is a repo with a bunch of utility scripts for SPM compiled to a 
 If you have an idea for a cool fixer/utility - don't hesitate to file and issue or make a PR!
 
 ## Current functionalities:
-1. [#cleaning-your-project](Clean your project (remove cache, builds, xcodeproj etc))
-1. [#quick-fixer](Fix Quick on SPM)
-1. [#swift-version---update-your-targets-to-swift-3-or-4](Update Swift version in given target or all targets)
-1. [#inhibit-warnings](Inhibit all warnings in given target or all targets)
+1. [Clean your project (remove cache, builds, xcodeproj etc)](#cleaning-your-project)
+1. [Fix Quick on SPM](#quick-fixer)
+1. [Update Swift version in given target or all targets](#swift-version---update-your-targets-to-swift-3-or-4)
+1. [Inhibit all warnings in given target or all targets](#inhibit-warnings)
 
 ## Before you use the script:
 
